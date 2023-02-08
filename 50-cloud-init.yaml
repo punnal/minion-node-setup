@@ -1,0 +1,14 @@
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: true
+      optional: true
+  wifis:
+    wlan0:
+      optional: true
+      dhcp4: true
+      access-points:
+        "SNLInternal":
+          password: "snliddqd"
+        "UCSB Wireless Web": {}

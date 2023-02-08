@@ -1,0 +1,9 @@
+master: pinot.cs.ucsb.edu
+
+grains:
+  architecture:
+    - amd
+    - amd64
+  platform: ATOPNUC
+ 
+master_tries: -1
