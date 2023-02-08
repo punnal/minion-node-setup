@@ -47,12 +47,11 @@ newgrp docker
 
 echo "*.* action(type=\"omfwd\" target=\"pinot.cs.ucsb.edu\" port=\"514\" protocol=\"udp\")" | sudo tee -a /etc/rsyslog.conf
 
-curl https://drive.google.com/file/d/1t2ZmWdIvAYS1v9FPVWDft-nEhLbpIkOY/view?usp=sharing
 
 sudo cp 50-cloud-init.yaml /etc/netplan/
 sudo cp minion /etc/salt/
 
-line="@reboot echo \"atopnuc-\"`cat sys/class/net/eth0/address` > /etc/salt/minion_id"
-(crontab -u $(whoami) -l; echo "$line" ) | crontab -u $(whoami)
+line="@reboot echo \"atopnuc-\"`cat /sys/class/net/enp1s0/address` > /etc/salt/minion_id"
+(crontab -u $(whoami) -l; echo "$line" ) | crontab -u $(whoami) -
 
 
