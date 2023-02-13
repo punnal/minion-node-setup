@@ -51,6 +51,6 @@ sudo cp 50-cloud-init.yaml /etc/netplan/
 sudo cp minion /etc/salt/
 
 line="@reboot echo \"atopnuc-\"`cat /sys/class/net/enp1s0/address` > /etc/salt/minion_id"
-(crontab -u $(whoami) -l; echo "$line" ) | crontab -u $(whoami) -
+(crontab -u root -l; echo "$line" ) | crontab -u root -
 
 newgrp docker
