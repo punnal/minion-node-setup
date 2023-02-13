@@ -41,7 +41,6 @@ sudo groupadd docker
 
 sudo usermod -aG docker $USER
 
-newgrp docker
 
 # Doing other configration
 
@@ -54,4 +53,4 @@ sudo cp minion /etc/salt/
 line="@reboot echo \"atopnuc-\"`cat /sys/class/net/enp1s0/address` > /etc/salt/minion_id"
 (crontab -u $(whoami) -l; echo "$line" ) | crontab -u $(whoami) -
 
-
+newgrp docker
