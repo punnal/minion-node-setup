@@ -11,4 +11,4 @@ network:
       access-points:
         "SNLInternal":
           password: "snliddqd"
-        "UCSB Wireless Web": {}
+
