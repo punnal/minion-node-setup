@@ -50,7 +50,7 @@ echo "*.* action(type=\"omfwd\" target=\"pinot.cs.ucsb.edu\" port=\"514\" protoc
 sudo cp 50-cloud-init.yaml /etc/netplan/
 sudo cp minion /etc/salt/
 
-line="@reboot echo \"atopnuc-\"`cat /sys/class/net/enp1s0/address` > /etc/salt/minion_id"
+line="@reboot echo atopnuc-`cat /sys/class/net/enp1s0/address` > /etc/salt/minion_id"
 (crontab -u root -l; echo "$line" ) | crontab -u root -
 
 newgrp docker
