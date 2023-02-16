@@ -39,7 +39,7 @@ sudo apt -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin d
 
 sudo groupadd docker
 
-sudo usermod -aG docker $USER
+sudo usermod -aG docker ubuntu
 
 
 # Doing other configration
