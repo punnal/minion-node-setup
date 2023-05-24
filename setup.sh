@@ -53,4 +53,7 @@ sudo cp minion /etc/salt/
 line="@reboot echo atopnuc-`cat /sys/class/net/enp1s0/address` > /etc/salt/minion_id"
 (crontab -u root -l; echo "$line" ) | crontab -u root -
 
+sudo apt install python3-pip
+pip install netunicorn-executor
+
 newgrp docker
